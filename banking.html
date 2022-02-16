@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <h1 class="text-5xl text-center mt-10">Let's get some <span class="font-semibold text-purple-600"> Mooooooney</span>!!!</h1>
+    </header>
+    <main class="w-3/4 mx-auto">
+        <!-- Balance and Transition -->
+        <section class="mt-8">
+            <div class="grid grid-cols-3 gap-4 text-white">
+                <div class="bg-blue-300 p-12 rounded text-center">
+                    <h3 class="text-3xl ">Deposit</h3>
+                    <h4 class="text-6xl mt-4">$<span id="deposit-total">00</span> </h4>
+                </div>
+                <div class="bg-green-300 p-12 rounded text-center">
+                    <h3 class="text-3xl ">Withdraw</h3>
+                    <h4 class="text-6xl mt-4">$<span id="withdraw-total">00</span></h4>
+                </div>
+                <div class="bg-yellow-300 p-12 rounded text-center">
+                    <h3 class="text-3xl ">Balance</h3>
+                    <h4 class="text-6xl mt-4">$<span id="balance-total">1240</span></h4>
+                </div>
+            </div>
+        </section>
+        <!-- Deposit and Withdrawal -->
+        <section class="mt-12">
+            <div class="grid grid-cols-2 gap-8">
+                <div class="bg-red-100 p-8 rounded">
+                    <h3 class="text-2xl mb-4">Please Deposit</h3>
+                    <div class=""> 
+                        <input class="border inline-block border-purple-200 w-2/4 mb-4 px-3 py-1 rounded" type="text" name="" id="deposit-amount" placeholder="$ amount you want to deposit">
+                        <br>
+                        <button id="deposit-btn" class="bg-blue-400 inline-block px-6 rounded-full py-2 text-white">Deposit</button>
+                        <span id="error-deposit" class="block mt-4 hidden text-red-700">You can't Deposit under $1 or empty value!</span>
+                    </div>
+                </div>
+                <div class="bg-purple-100 p-8 rounded">
+                    <h3 class="text-2xl mb-4">Please Withdraw</h3>
+                    <div class=""> 
+                        <input class="border inline-block border-purple-200 w-2/4 mb-4 px-3 py-1 rounded" type="text" name="" id="withdraw-amount" placeholder="$ amount you want to withdraw">
+                        <br>
+                        <button id="withdraw-btn" class="bg-green-400 inline-block px-6 rounded-full py-2 text-white">Withdraw</button>
+                        <span id="error-withdraw" class="block mt-4 hidden text-red-700">You can't Withdraw under $0</span>
+                        <span id="error-balance" class="block mt-4 hidden text-red-700">You can't Withdraw over total balance or empty!</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- javascript  -->
+    <script src="js/bank-deposit.js"></script>
+</body>
+</html>
